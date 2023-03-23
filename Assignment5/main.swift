@@ -29,9 +29,11 @@ import Foundation
 
 while true {
   print("Input folder path where your student info file exists:")
-  let folderPath = "/Users/h_namikawa/Desktop/SwiftLesson/Assignment5/Assignment5"//readLine() ?? ""
+  let folderPath = readLine() ?? ""
+  print("")
   print("Input file name which you want to read:")
-  let fileName = "sample.in"//readLine() ?? ""
+  let fileName = readLine() ?? ""
+  print("")
   
   let studentReader = StudentReader(targetFolder: folderPath, targetFile: fileName)
   var result = studentReader.read()
@@ -55,10 +57,6 @@ while true {
   }
   
   print("Complete reading!!")
-  
-  for student in students {
-    print(student)
-  }
   
   while true {
     print("Input file name which you want to write:")
